@@ -1,13 +1,9 @@
-<div class="my_navbar navbar navbar-expand-md">
-    <a href="{% url 'homePage' %}" class="navbar-brand my_brand">Grocery List</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" 
-    data-target="#navbarContent" aria-controls="navbarContent"
-    aria-expanded="false" aria-label="Toggle Navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarContent">
-        <div class="navbar-nav ml-auto">
-            <a href="{% url 'homePage' %}" class="nav-item nav-link my_links">Home</a>
-        </div>
-    </div>
-</div>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<nav class="nav flex-column">
+  <a class="nav-link active" href="#">Home</a>
+  <a class="nav-link" href="#">Top Picks</a>
+  <a class="nav-link" href="#">Reviews</a>
+  <a class="nav-link" href="#">About</a>
+  <a class="nav-link" href="#">Contact</a>
+</nav>
