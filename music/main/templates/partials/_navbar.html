@@ -1,6 +1,6 @@
 <nav class="navbar navbar-hide navbar-dark bg-dark static-top">
   <div class="container">
-    <a class="navbar-brand" href="#">Login</a>
+    <a class="navbar-brand" href="#">Welcome</a>
     <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
       aria-expanded="True" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -15,6 +15,12 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Top picks</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'login' %}">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'signup' %}">Sign up</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Reviews</a>
