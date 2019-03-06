@@ -7,6 +7,7 @@ from main.models import our_picks
 
 def home(request):
     picks = our_picks.objects.all()
+
     context = {
         'html_picks': picks
     }
