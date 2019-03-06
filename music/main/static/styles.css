@@ -8,6 +8,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #f0f0f0;
 }
 
+.list_table{
+  text-align: center;
+  color: #f0f0f0;
+}
+
 ul {
   margin: 0;
 }
