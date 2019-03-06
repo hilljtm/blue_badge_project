@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 
-{% load render_table from django_tables2 %}
 
 <!doctype html>
 <html lang="en">
@@ -52,7 +51,24 @@
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/9_gkpYORQLU" allowfullscreen></iframe>
 </div>
 
-    {% render_table our_picks %}
+   <div class="list_table">
+ <table class="table">
+   <thead class="thead-dark">
+     <tr class="table_header">
+       <th class="table_head" scope="col" >Title</th>
+       <th class="table_head" scope="col" >Link</th>
+     </tr>
+   </thead>
 
+{% if picks %}
+ {% for item in picks %}
+   <tr>
+     <tr>
+       <td>{{ picks.song_title }}</td>
+       <td>{{ picks.link }}</td>
+     </tr>
+   </tr>
+ </table>
+</div>
 
 {% endblock %}
