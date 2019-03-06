@@ -42,7 +42,7 @@
         </div>
         <div id="home_content" class="col-sm-12 col-md-6">
             <div id="home_inner">
-                <h2>Top picks</h2>
+                <h2>Editors' Picks</h2>
             </div>
         </div>
     </div>
@@ -51,25 +51,28 @@
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/9_gkpYORQLU" allowfullscreen></iframe>
 </div>
 
-   <div class="list_table">
- <table class="table">
-   <thead class="thead-dark">
-     <tr class="table_header">
-       <th class="table_head" scope="col" >Title</th>
-       <th class="table_head" scope="col" >Link</th>
-     </tr>
-   </thead>
+<div class="list_table">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr class="table_header">
+                <th class="table_head" scope="col">Title</th>
+                <th class="table_head" scope="col">Link</th>
+            </tr>
+        </thead>
+        <tbody>
 
-{% if picks %}
- {% for item in picks %}
-   <tr>
-     <tr>
-       <td>{{ picks.song_title }}</td>
-       <td>{{ picks.link }}</td>
-     </tr>
-   </tr>
- </table>
+
+            {% if html_picks %}
+            {% for item in html_picks %}
+            <tr>
+            <tr>
+                <td>{{ item.song_title }}</td>
+                <td>{{ item.link }}</td>
+            </tr>
+            </tr>
+            {% endfor %}
+            {% endif %}
+        </tbody>
+    </table>
 </div>
-{% endfor %}
-{% endif %}
 {% endblock %}

@@ -1,16 +1,19 @@
 body {
- background-color: #9c9b96;
+ background-color: #6f7c80;
 background-image: url("https://www.transparenttextures.com/patterns/dark-wall.png");
-  color: #333333;
-  margin-top: 5rem;
+  color: #f8f8f8;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #444444;
+  color: #f0f0f0;
 }
 
 ul {
   margin: 0;
+}
+
+.navbar-nav{
+    margin: 0;
 }
 
 .nav-link {
@@ -52,7 +55,7 @@ ul {
 }
 
 .article-title {
-  color: #444444;
+  color: #f0f0f0;
 }
 
 a.article-title:hover {
