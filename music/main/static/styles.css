@@ -1,5 +1,5 @@
 body {
-  background: #fafafa;
+  background: #ebe7e2;
   color: #333333;
   margin-top: 5rem;
 }
@@ -32,8 +32,10 @@ ul {
     footer {
  position: absolute;
  bottom: 0;
- width: 100%;
+ display: inline;
+ margin-right: 1em;
 }
+
 
 
 .content-section {
