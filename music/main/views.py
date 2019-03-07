@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 from django.db import models
-from main.models import our_picks
+from main.models import *
 
 
 def home(request):

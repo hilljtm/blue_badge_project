@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User
+import datetime
 
 
 class our_picks(models.Model):
