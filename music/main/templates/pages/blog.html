@@ -2,23 +2,25 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title> ElevenFifty Music </title>
-  </head>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+
+  <title> ElevenFifty Music </title>
+</head>
 
 
 {% block content %}
 
 {% if user.is_authenticated %}
- Hi {{ user.username }}!
- <div class="container">
+Hi {{ user.username }}!
+<div class="container">
   <form action="#" class="add_form" method="POST">
     {% csrf_token %}
     <div class="form-group">
@@ -40,30 +42,30 @@
 {% endif %}
 
 <div class="list_table">
-    <table class="table">
-        <thead class="thead-dark">
-            <tr class="table_header">
-                <th class="table_head" scope="col">User</th>
-                <th class="table_head" scope="col">Post</th>
-                <th class="table_head" scope="col">Date</th>
-            </tr>
-        </thead>
-        <tbody>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr class="table_header">
+        <th class="table_head" scope="col">User</th>
+        <th class="table_head" scope="col">Title</th>
+        <th class="table_head" scope="col">Post</th>
+        <th class="table_head" scope="col">Date</th>
+      </tr>
+    </thead>
+    <tbody>
 
 
-            {% if blog_posts %}
-            {% for post in blog_posts %}
-            <tr>
-            <tr>
-                <td>{{ post.User }}</td>
-                <td>{{ post.blog_post }}</td>
-                <td>{{ post.date }}</td>
-            </tr>
-            </tr>
-            {% endfor %}
-            {% endif %}
-        </tbody>
-    </table>
+      {% for post in posts %}
+      <tr>
+      <tr>
+        <td>{{ post.author }}</td>
+        <td>{{ post.title }}</td>
+        <td>{{ post.content }}</td>
+        <td>{{ post.date_posted }}</td>
+      </tr>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 </div>
 
 {% endblock %}
