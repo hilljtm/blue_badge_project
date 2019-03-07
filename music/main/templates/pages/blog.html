@@ -44,6 +44,7 @@
         <thead class="thead-dark">
             <tr class="table_header">
                 <th class="table_head" scope="col">User</th>
+                <th class="table_head" scope="col">Title</th>
                 <th class="table_head" scope="col">Post</th>
                 <th class="table_head" scope="col">Date</th>
             </tr>
@@ -51,17 +52,16 @@
         <tbody>
 
 
-            {% if blog_posts %}
-            {% for post in blog_posts %}
+            {% for post in posts %}
             <tr>
             <tr>
-                <td>{{ post.User }}</td>
-                <td>{{ post.blog_post }}</td>
-                <td>{{ post.date }}</td>
+                <td>{{ post.author }}</td>
+                <td>{{ post.title }}</td>
+                <td>{{ post.content }}</td>
+                <td>{{ post.date_posted }}</td>
             </tr>
             </tr>
             {% endfor %}
-            {% endif %}
         </tbody>
     </table>
 </div>
