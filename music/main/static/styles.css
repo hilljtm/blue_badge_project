@@ -49,7 +49,14 @@ ul {
  margin-right: 1em;
 }
 
+<!--
+.loginform {
+  content: counter()
+}
 
+.list_table {
+  align-content: center;
+}
 
 .content-section {
   background: #ffffff;
@@ -60,7 +67,7 @@ ul {
 }
 
 .article-title {
-  color: #f0f0f0;
+  color: #fcfcfc;
 }
 
 a.article-title:hover {
