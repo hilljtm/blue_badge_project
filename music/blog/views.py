@@ -1,10 +1,9 @@
-from django.shortcuts import render
-from . import models
+from django.shortcuts import render, HttpResponse
+from .models import Post
 
 
-def blog_view(request):
-    posts = models.blog.objects.all()
-    context_blog = {
-        'blog_posts': posts
+def blog(request):
+    context = {
+        'posts': Post.objects.all()
     }
-    return render(request, 'pages/blog.html', context=context_blog)
+    return render(request, 'pages/blog.html', context)
