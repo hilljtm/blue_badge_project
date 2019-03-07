@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -31,9 +31,6 @@
 </div>
 {% endif %}
 
-
-
-
 <p class="bg-dark text-white"></p>
 <div class="container">
     <div id="home_row" class="row">
@@ -52,8 +49,8 @@
 </div>
 <br>
 <div class="list_table">
-    <table class="table">
-        <thead class="thead-dark">
+    <table class="table table-bordered table-dark">
+        <thead class="thead-light">
             <tr class="table_header">
                 <th class="table_head" scope="col">Title</th>
                 <th class="table_head" scope="col">Link</th>
@@ -61,13 +58,12 @@
         </thead>
         <tbody>
 
-
             {% if html_picks %}
             {% for item in html_picks %}
             <tr>
             <tr>
                 <td>{{ item.song_title }}</td>
-                <td>{{ item.link }}</td>
+                <td><a href="{{ item.link }}" target="_blank">{{ item.link }}</a></td>
             </tr>
             </tr>
             {% endfor %}
