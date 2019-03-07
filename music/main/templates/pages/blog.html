@@ -60,7 +60,7 @@ Hi {{ user.username }}!
         <td>{{ post.author }}</td>
         <td>{{ post.title }}</td>
         <td>{{ post.content }}</td>
-        <td>{{ post.date_posted }}</td>
+        <td>{{ post.date_posted|date:"F d, Y" }}</td>
       </tr>
       </tr>
       {% endfor %}
