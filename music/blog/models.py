@@ -1,11 +1,13 @@
-from main.models import *
+from django.db import models
+from django.utils import timezone
 from django.contrib.auth.models import User
 
 
-class blog(models.Model):
-    User = User
-    blog_post = models.CharField('Post:', max_length=500)
-    date = datetime.datetime.now()
+class Post(models.Model):
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+    date_posted = models.DateTimeField(default=timezone.now)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.blog_post
+        return self.title
