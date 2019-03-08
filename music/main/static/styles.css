@@ -1,9 +1,12 @@
 body {
  background-color: #6f7c80;
-background-image: url("https://www.transparenttextures.com/patterns/dark-wall.png");
+ background-image: url("https://www.transparenttextures.com/patterns/dark-wall.png");
   color: #f8f8f8;
 }
 
+.base {
+  background-color: #6f7c80;
+}
 h1, h2, h3, h4, h5, h6 {
   color: #f0f0f0;
 }
@@ -36,8 +39,7 @@ ul {
   font-weight: 500;
 }
 
-.site-footer .navbar-nav 
-    footer {
+.my-footer {
  position: absolute;
  bottom: 0;
  display: inline;
@@ -73,4 +75,19 @@ ul {
   border: 1px solid #dddddd;
   border-radius: 3px;
   margin-bottom: 20px;
+}
+
+.aboutcontainer {
+ background: #6f7c80;
+ background-image: url("https://www.transparenttextures.com/patterns/dark-wall.png");
+}
+
+.titleabout {
+  margin-top: 30px;
+}
+
+.about {
+  text-align: center;
+  margin-right: 20px;
+
 }
