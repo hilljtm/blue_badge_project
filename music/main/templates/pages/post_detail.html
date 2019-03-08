@@ -54,16 +54,14 @@ Hi {{ user.username }}!
     <tbody>
 
 
-      {% for post in posts %}
       <tr>
       <tr>
-        <td>{{ post.author }}</td>
-        <td>{{ post.title }}</td>
-        <td>{{ post.content }}</td>
-        <td>{{ post.date_posted|date:"F d, Y g:i a" }}</td>
+        <td>{{ object.author }}</td>
+        <td>{{ object.title }}</td>
+        <td>{{ object.content }}</td>
+        <td>{{ object.date_posted|date:"F d, Y g:i a" }}</td>
       </tr>
       </tr>
-      {% endfor %}
     </tbody>
   </table>
 </div>
