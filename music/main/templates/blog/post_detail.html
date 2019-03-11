@@ -5,8 +5,12 @@
         <article class="media content-section">
           <div class="media-body">
             <div class="article-metadata">
-              <a class="mr-2" href="#">{{ object.author }}</a>
+              <a class="mr-2" href="{% url 'userPosts' object.author.username %}">{{ object.author }}</a>
               <small class="text-muted">{{ object.date_posted }}</small>
+              {% if object.author == user %}
+              <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'postUpdate' object.id %}">Update</a>
+              <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'postDelete' object.id %}">Delete</a>
+              {% endif %}
             </div>
             <h2 class="article-content">{{ object.title }}</h2>
             <p class="article-content">{{ object.content }}</p>
