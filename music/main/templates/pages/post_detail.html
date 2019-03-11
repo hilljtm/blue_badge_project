@@ -66,4 +66,7 @@ Hi {{ user.username }}!
   </table>
 </div>
 
+{{% if True %}}
+<a class="btn btn-outline-danger" href="post/{{ post.id }}/delete">Delete?</a>
+
 {% endblock %}
