@@ -11,9 +11,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #f0f0f0;
 }
 
-ul {
-  margin: 0;
-}
 
 .navbar-nav{
     margin: 0;
@@ -77,17 +74,11 @@ ul {
   margin-bottom: 20px;
 }
 
-.aboutcontainer {
- background: #6f7c80;
- background-image: url("https://www.transparenttextures.com/patterns/dark-wall.png");
-}
-
-.titleabout {
-  margin-top: 30px;
-}
-
 .about {
-  text-align: center;
-  margin-right: 20px;
-
+  margin-top: 30px;
+  align-content: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: 20px
 }
+ 
