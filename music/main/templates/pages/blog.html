@@ -24,40 +24,6 @@ Hi {{ user.username }}!
 
 <a href="post/new"><button type="submit">New Post</button></a>
 
-<div class="list_table">
-  <table class="table">
-    <thead class="thead-dark">
-      <tr class="table_header">
-        <th class="table_head" scope="col">User</th>
-        <th class="table_head" scope="col">Title</th>
-        <th class="table_head" scope="col">Post</th>
-        <th class="table_head" scope="col">Date</th>
-      </tr>
-    </thead>
-    <tbody>
-
-
-      {% for post in posts %}
-      <tr>
-      <tr>
-        <td>{{ post.author }}</td>
-        <td>{{ post.title }}</td>
-        <td>{{ post.content }}</td>
-        <td>{{ post.date_posted|date:"F d, Y g:i a" }}</td>
-
-        {% if user.username == post.author %}
-          <h1>dog</h1>
-          <a class="btn-danger" href="post/{% url 'postDetail' object.id %}/delete/">Delete?</a>
-
-        {% endif %}
-      </tr>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-</div>
-
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -68,73 +34,21 @@ Hi {{ user.username }}!
 
 <body>
 
-  <!-- Main Content -->
+{% for post in posts %}
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="post-preview">
-          <a href="{{ post.content }}">
-            <h2 class={{ user }}></h2>
-              blahblahblahblah css sucks 
-            </h2>
-            <h3 class="{{ post.title }}">
-              50000000000000000 reasons to never use CSS
-            </h3>
-          </a>
-          <p class="post-meta">Posted by
-            Css sucks123
-            <a href="{{ post.author }}"></a>
-            on September 24, 2019</p>
+            <h3><a href="post/{{ post.id }}/">{{ post.title }}</h3></a>
+            <h2>{{ post.content }}</h2>
+          <p class="post-meta">Posted by {{ post.author }} on {{ post.date_posted|date:"F d, Y g:i a" }}</p>
         </div>
         <hr>
-        <div class="post-preview">
-          <a href="{{ post.content }}">
-            <h2 class="{{ post.title }}">
-              I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-            </h2>
-          </a>
-          <p class="post-meta">Posted by
-            {{ post.author }}
-            <a href="{{ post.author }}"></a>
-        </div>
-        <hr>
-        <div class="post-preview">
-          <a href="{{ url.homePage }}">
-            <h2 class="{{ post.title }}">
-              Science has not yet mastered prophecy
-            </h2>
-            <h3 class="post-subtitle">
-              We predict too much for the next year and yet far too little for the next ten.
-            </h3>
-          </a>
-          <p class="post-meta">Posted by
-            <a href="{{ post.author }}"></a>
-            on August 24, 2019</p>
-        </div>
-        <hr>
-        <div class="post-preview">
-          <a href="post.html">
-            <h2 class="post-title">
-              Failure is not an option
-            </h2>
-            <h3 class="post-subtitle">
-              Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-            </h3>
-          </a>
-          <p class="post-meta">Posted by
-            <a href="#">Start Bootstrap</a>
-            on July 8, 2019</p>
-        </div>
-        <hr>
-        <!-- Pager -->
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
-        </div>
       </div>
     </div>
   </div>
 
-  <hr>
+{% endfor %}
 
 </body>
 </html>
