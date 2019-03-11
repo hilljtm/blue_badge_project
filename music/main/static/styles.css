@@ -37,16 +37,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .my-footer {
- position: absolute;
+ position: fixed;
  bottom: 0;
  display: inline;
  margin-right: 1em;
-}
-
-
-.loginform {
-  align-content: center;
-  margin-left: 60px;
 }
 
 .list_table.site-header{
@@ -79,6 +73,14 @@ h1, h2, h3, h4, h5, h6 {
   align-content: center;
   margin-left: 50px;
   margin-right: 50px;
-  font-size: 20px
+  font-size: 15px
 }
- 
+
+.media-body {
+  color: #0D0101
+}
+
+.article-content{
+   color: #0D0101
+ }
+
