@@ -20,26 +20,9 @@
 
 {% if user.is_authenticated %}
 Hi {{ user.username }}!
-<div class="container">
-  <form action="#" class="add_form" method="POST">
-    {% csrf_token %}
-    <div class="form-group">
-      <label for="user">{{ user }}</label>
-      <input type="text" name="blog" class="form-control" placeholder="Enter your post here">
-    </div>
-    <div class="form-group">
-      <input type="submit" class="btn btn-success form_submit">
-    </div>
-  </form>
-</div>
-{% else %}
-<div class="alert alert-danger alert-dismissible fade show" role="alert">
-  <strong>Yikes!</strong> looks like you aren't <a href="{% url 'login' %}" class="alert-link">logged in</a>
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
 {% endif %}
+
+<a href="post/new"><button type="submit">New Post</button></a>
 
 <div class="list_table">
   <table class="table">
@@ -61,6 +44,12 @@ Hi {{ user.username }}!
         <td>{{ post.title }}</td>
         <td>{{ post.content }}</td>
         <td>{{ post.date_posted|date:"F d, Y g:i a" }}</td>
+
+        {% if user.username == post.author %}
+          <h1>dog</h1>
+          <a class="btn-danger" href="post/{% url 'postDetail' object.id %}/delete/">Delete?</a>
+
+        {% endif %}
       </tr>
       </tr>
       {% endfor %}
