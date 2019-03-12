@@ -68,3 +68,11 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         if self.request.user == post.author:
             return True
         return False
+
+
+class topFiveBlog(ListView):
+    model = Post
+    template_name = 'pages/blog_1.html'
+    context_object_name = 'posts'
+    ordering = ['-date_posted']
+    paginate_by = 5
