@@ -98,3 +98,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+ .account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
