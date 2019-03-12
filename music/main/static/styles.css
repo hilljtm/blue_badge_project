@@ -4,6 +4,12 @@ body {
   color: #f8f8f8;
 }
 
+@media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+
 .base {
   background-color: #6f7c80;
 }
@@ -77,10 +83,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .media-body {
-  color: #0D0101
+  color: #0D0101;
+  align-content: center;
 }
 
 .article-content{
-   color: #0D0101
- }
+   color: #0D0101;
+   align-content: center;
+}
+
+.form-group {
+  font-size: 15px;
+  align-content: center;
+}
+
 

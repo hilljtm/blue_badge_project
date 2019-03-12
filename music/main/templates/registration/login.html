@@ -15,4 +15,14 @@
     </form>
 </div>
 
+<div class="form-group">
+    <h4>Forgot password</h4>
+    <form method="post">
+        {% csrf_token %} {{ form.as_p }}
+        <button type="submit">Sign up</button>
+    </form>
+</div>
+
+
+
 {% endblock %}
