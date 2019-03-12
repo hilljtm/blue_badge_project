@@ -1,16 +1,22 @@
 body {
  background-color: #6f7c80;
-background-image: url("https://www.transparenttextures.com/patterns/dark-wall.png");
+ background-image: url("https://www.transparenttextures.com/patterns/dark-wall.png");
   color: #f8f8f8;
 }
 
+@media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+
+.base {
+  background-color: #6f7c80;
+}
 h1, h2, h3, h4, h5, h6 {
   color: #f0f0f0;
 }
 
-ul {
-  margin: 0;
-}
 
 .navbar-nav{
     margin: 0;
@@ -36,18 +42,11 @@ ul {
   font-weight: 500;
 }
 
-.site-footer .navbar-nav 
-    footer {
- position: absolute;
+.my-footer {
+ position: fixed;
  bottom: 0;
  display: inline;
  margin-right: 1em;
-}
-
-<!--
-.loginform {
-  align-content: center;
-  margin-left: 60px;
 }
 
 .list_table.site-header{
@@ -74,3 +73,28 @@ ul {
   border-radius: 3px;
   margin-bottom: 20px;
 }
+
+.about {
+  margin-top: 30px;
+  align-content: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: 15px
+}
+
+.media-body {
+  color: #0D0101;
+  align-content: center;
+}
+
+.article-content{
+   color: #0D0101;
+   align-content: center;
+}
+
+.form-group {
+  font-size: 15px;
+  align-content: center;
+}
+
+

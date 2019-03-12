@@ -16,8 +16,8 @@ def home(request):
 
 
 def about(request):
-    return HttpResponse("ABOUT PAGE")
+    return render(request, 'pages/about.html')
 
 
 def contact(request):
-    return HttpResponse("CONTACT PAGE")
+    return render(request, 'pages/contact.html')
