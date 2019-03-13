@@ -14,11 +14,12 @@
         <div id="container" class="container">
             <div class="row">
                 <div class="col-sm-10 offset-sm-1 text-center">
-                    <h1 class="display-3">Welcome! Login?</h1>
-                    <div class="info-form">
-                        <form class="" method="post">
+                    <h2 class="display-4">Welcome, login?</h2>
+                    <div class="info-form mt-5">
+                        <form method="post">
                             {% csrf_token %} {{ form.as_p }}
-                            <button type="submit">Login</button>
+                            <button class="ml-5 btn btn-primary" type="submit">Login</button>
+                            <button class="ml-5 btn btn-primary" type="submit"><a class="my_btn" href="/users/signup/">Sign Up</a></button>
                         </form>
                     </div>
                 </div>
