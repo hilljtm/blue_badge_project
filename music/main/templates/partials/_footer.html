@@ -1,21 +1,21 @@
 <!-- footer -->
-<div class="my_footer">
-<div id="my_footer">
-<div class="row leg-room">
-<div class="col-md-12 text-center">
- &copy; 2019 ElevenFifty Music
-    <br>
-    <tr>
-    <a href="{% url 'homePage' %}">Home</a>
-    {% if user.is_authenticated %}
-    <a href="{% url 'logout' %}">Logout</a>
-    {% else %}
-    <a href="{% url 'login' %}">Login</a>
-    {% endif %}
+<div class="my_footer fixed-bottom">
+    <div id="my_footer">
+        <div class="row leg-room">
+            <div class="col-md-12 text-center">
+                &copy; 2019 ElevenFifty Music
+                <br>
+                <tr>
+                <a href="{% url 'homePage' %}">Home</a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'logout' %}">Logout</a>
+                {% else %}
+                    <a href="{% url 'login' %}">Login</a>
+                {% endif %}
 
-    <a href="{% url 'aboutPage' %}">About</a>
-    </tr>
-</div>
-</div>
-</div>
+                <a href="{% url 'aboutPage' %}">About</a>
+                </tr>
+            </div>
+        </div>
+    </div>
 </div>
