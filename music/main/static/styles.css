@@ -13,6 +13,7 @@ body {
 .base {
   background-color: #6f7c80;
 }
+
 h1, h2, h3, h4, h5, h6 {
   color: #f0f0f0;
 }
@@ -97,4 +98,18 @@ h1, h2, h3, h4, h5, h6 {
   align-content: center;
 }
 
+ .account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
 
+.my_btn{
+  color: whitesmoke;
+}
+
+.my_btn:hover {
+  text-decoration: none;
+  color: whitesmoke;
+}
