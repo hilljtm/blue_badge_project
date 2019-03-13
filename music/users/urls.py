@@ -10,4 +10,4 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('signup/', views.signUp.as_view(), name='signup'),
     path('profile/', views.profile, name='profile'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
