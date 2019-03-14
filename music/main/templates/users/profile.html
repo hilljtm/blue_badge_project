@@ -1,13 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="content-section">
-        <div class="media">
-            <img class="rounded account-img" src="#">
-            <div class="media-body">
-                <h2 class="account-heading">{{ user.username }}</h2>
-                <p class="text-secondary">{{ user.email }}</p>
-            </div>
-        </div>
+<div class="my_profile">
+    <div class="account_img img_div">
+        <img class="account-img rounded-circle" src="{{ user.profile.image.url }}">
     </div>
+    <div class="profile_info">
+        <h2>{{ user.username }}</h2>
+        <p>{{ user.email }}</p>
+    </div>
+    <div class="profile_btn_div">
+        <button type="submit" class="btn btn-light"><a class="profile_btn" href="{% url 'postCreate' %}">New Post</a></button>
+        <button type="submit" class="btn btn-light"><a class="profile_btn" href="{% url 'userPosts' user.username %}">See all Posts</a></button>
+    </div>
+</div>
 {% endblock %}
