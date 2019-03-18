@@ -13,9 +13,14 @@
 </head>
 {% block content %}
 {% if user.is_authenticated %}
-Hi {{ user.username }}!
-<p><a href="{% url 'logout' %}">logout</a></p>
-<p><a href="{% url 'password_reset' %}">reset password</a></p>
+<div class="center_div">
+    <h1 class="head_name">Hi {{ user.username }}!</h1>
+    <div class="center_div">
+            <a class="btn btn-primary my_btn homeBtn" href="{% url 'logout' %}">logout</a>
+            <a class="btn btn-primary my_btn homeBtn" href="{% url 'password_reset' %}">reset password</a>
+    </div>
+</div>
+
 {% else %}
 <div class="alert alert-danger alert-dismissible fade show" role="alert">
     <strong>Yikes!</strong> looks like you aren't <a href="{% url 'login' %}" class="alert-link">logged in</a>
@@ -24,6 +29,16 @@ Hi {{ user.username }}!
     </button>
 </div>
 {% endif %}
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+>>>>>>> 1efc59cece965828866ee9d63c5559258c5fa28f
 <div id="video-carousel-example2" class="carousel slide carousel-fade" data-ride="carousel">
     <!--Indicators-->
     <ol class="carousel-indicators">
@@ -115,4 +130,36 @@ Hi {{ user.username }}!
     <!--/.Controls-->
 </div>
 <!--Carousel Wrapper-->
+<<<<<<< HEAD
 {% endblock %}
+=======
+
+
+
+
+
+
+
+
+
+
+
+<div>
+    <!--Table for Top Picks-->
+{% for song in html_picks %}
+  <div class="mt-5">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-preview">
+            <h3> <a class="homeTableTitles" href="#">{{ song.song_title }}</a></h3>
+            <h2><a class="homeTableLinks" target=blank href="{{ song.link }}">{{ song.link }}</a></h2>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}
+>>>>>>> 1efc59cece965828866ee9d63c5559258c5fa28f

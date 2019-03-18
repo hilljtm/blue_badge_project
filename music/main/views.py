@@ -12,7 +12,7 @@ def home(request):
         'html_picks': picks
     }
 
-    return render(request, 'pages/home.html', context=context)
+    return render(request, 'pages/home.html', context)
 
 
 def about(request):
