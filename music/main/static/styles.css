@@ -69,6 +69,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
 }
 
+.content-section1 {
+  background: #fafafa
+}
+
 .about {
   margin-top: 30px;
   align-content: center;
@@ -87,9 +91,17 @@ h1, h2, h3, h4, h5, h6 {
    align-content: center;
 }
 
-.form-group {
+.form_group {
   font-size: 15px;
-  align-content: center;
+  text-align: center;
+  margin-top: 75px;
+  color: #0D0101
+}
+
+.form_group1{
+  font-size: 15px;
+  text-align: center;
+  margin-top: 100px;
 }
 
  .account-img {
@@ -141,4 +153,12 @@ h1, h2, h3, h4, h5, h6 {
 .profile_btn:hover {
   text-decoration: none;
   color: rgb(36, 32, 32);
+}
+
+.btn-outline-info {
+  margin-bottom: 75px;
+}
+
+.my_profile {
+ align-content: center;
 }
