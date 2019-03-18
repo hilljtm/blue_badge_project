@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 15px;
   text-align: center;
   margin-top: 75px;
-  color: #0D0101
+  color: black;
 }
 
 .form_group1{
@@ -155,15 +155,6 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(36, 32, 32);
 }
 
-<<<<<<< HEAD
-.btn-outline-info {
-  margin-bottom: 75px;
-}
-
-.my_profile {
- align-content: center;
-}
-=======
 .homeBtn {
   margin: auto;
   margin-left: 10px;
@@ -199,4 +190,19 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 5px;
   border-bottom: 3px solid black;
 }
->>>>>>> 1efc59cece965828866ee9d63c5559258c5fa28f
+
+.btn-outline-info{
+  color: white;
+  margin-bottom: 50px;
+  border-color: #6f7c80
+}
+
+.btn-outline-info1{
+  color: white;
+  border-color: darkblue;
+}
+
+.content-section1{
+  color: #fafafa;
+  margin-bottom: 50px;
+}
