@@ -1,20 +1,16 @@
 {% extends 'base.html' %}
-
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
     <title> ElevenFifty Music </title>
-    </head>
-
-
+</head>
 {% block content %}
 
 {% if user.is_authenticated %}
@@ -34,12 +30,6 @@
     </button>
 </div>
 {% endif %}
-
-
-
-
-
-
 
 <div id="video-carousel-example2" class="carousel slide carousel-fade" data-ride="carousel">
     <!--Indicators-->
@@ -61,7 +51,6 @@
                 </div>
                 <div class="mask rgba-indigo-light"></div>
             </div>
-
             <!--Caption-->
             <div class="carousel-caption">
                 <div class="animated fadeInDown">
@@ -73,7 +62,6 @@
             <!--Caption-->
         </div>
         <!-- /.First slide -->
-
         <!-- Second slide -->
         <div class="carousel-item">
             <!--Mask color-->
@@ -85,7 +73,6 @@
                 </div>
                 <div class="mask rgba-purple-slight"></div>
             </div>
-
             <!--Caption-->
             <div class="carousel-caption">
                 <div class="animated fadeInDown">
@@ -98,7 +85,6 @@
             <!--Caption-->
         </div>
         <!-- /.Second slide -->
-
         <!-- Third slide -->
         <div class="carousel-item">
             <!--Mask color-->
@@ -110,7 +96,6 @@
                 </div>
                 <div class="mask rgba-black-strong"></div>
             </div>
-
             <!--Caption-->
             <div class="carousel-caption">
                 <div class="animated fadeInDown">
@@ -139,15 +124,6 @@
 <!--Carousel Wrapper-->
 
 
-
-
-
-
-
-
-
-
-
 <div>
     <!--Table for Top Picks-->
 {% for song in html_picks %}
@@ -166,3 +142,4 @@
 {% endfor %}
 
 {% endblock %}
+
