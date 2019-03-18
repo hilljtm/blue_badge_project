@@ -155,6 +155,14 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(36, 32, 32);
 }
 
+.btn-outline-info {
+  margin-bottom: 75px;
+}
+
+.my_profile {
+ align-content: center;
+}
+
 .homeBtn {
   margin: auto;
   margin-left: 10px;
@@ -189,20 +197,4 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   padding-bottom: 5px;
   border-bottom: 3px solid black;
-}
-
-.btn-outline-info{
-  color: white;
-  margin-bottom: 50px;
-  border-color: #6f7c80
-}
-
-.btn-outline-info1{
-  color: white;
-  border-color: darkblue;
-}
-
-.content-section1{
-  color: #fafafa;
-  margin-bottom: 50px;
 }
