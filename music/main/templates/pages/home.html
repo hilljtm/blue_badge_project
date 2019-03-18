@@ -1,39 +1,4 @@
 {% extends 'base.html' %}
-
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <title> ElevenFifty Music </title>
-  </head>
-
-
-{% block content %}
-
-
-{% if user.is_authenticated %}
- Hi {{ user.username }}!
- <p><a href="{% url 'logout' %}">logout</a></p>
- <p><a href="{% url 'password_reset' %}">reset password</a></p>
-{% else %}
-<div class="alert alert-danger alert-dismissible fade show" role="alert">
-  <strong>Yikes!</strong> looks like you aren't <a href="{% url 'login' %}" class="alert-link">logged in</a>
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-{% endif %}
-
-{% extends 'base.html' %}
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,18 +6,12 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-
     <title> ElevenFifty Music </title>
 </head>
-
-
 {% block content %}
-
-
 {% if user.is_authenticated %}
 Hi {{ user.username }}!
 <p><a href="{% url 'logout' %}">logout</a></p>
@@ -65,8 +24,6 @@ Hi {{ user.username }}!
     </button>
 </div>
 {% endif %}
-
-
 <div id="video-carousel-example2" class="carousel slide carousel-fade" data-ride="carousel">
     <!--Indicators-->
     <ol class="carousel-indicators">
@@ -87,7 +44,6 @@ Hi {{ user.username }}!
                 </div>
                 <div class="mask rgba-indigo-light"></div>
             </div>
-
             <!--Caption-->
             <div class="carousel-caption">
                 <div class="animated fadeInDown">
@@ -99,7 +55,6 @@ Hi {{ user.username }}!
             <!--Caption-->
         </div>
         <!-- /.First slide -->
-
         <!-- Second slide -->
         <div class="carousel-item">
             <!--Mask color-->
@@ -111,7 +66,6 @@ Hi {{ user.username }}!
                 </div>
                 <div class="mask rgba-purple-slight"></div>
             </div>
-
             <!--Caption-->
             <div class="carousel-caption">
                 <div class="animated fadeInDown">
@@ -124,7 +78,6 @@ Hi {{ user.username }}!
             <!--Caption-->
         </div>
         <!-- /.Second slide -->
-
         <!-- Third slide -->
         <div class="carousel-item">
             <!--Mask color-->
@@ -136,7 +89,6 @@ Hi {{ user.username }}!
                 </div>
                 <div class="mask rgba-black-strong"></div>
             </div>
-
             <!--Caption-->
             <div class="carousel-caption">
                 <div class="animated fadeInDown">
@@ -163,6 +115,4 @@ Hi {{ user.username }}!
     <!--/.Controls-->
 </div>
 <!--Carousel Wrapper-->
-
-
 {% endblock %}
