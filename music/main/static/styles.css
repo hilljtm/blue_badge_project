@@ -155,7 +155,6 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(36, 32, 32);
 }
 
-<<<<<<< HEAD
 .btn-outline-info {
   margin-bottom: 75px;
 }
@@ -163,7 +162,7 @@ h1, h2, h3, h4, h5, h6 {
 .my_profile {
  align-content: center;
 }
-=======
+
 .homeBtn {
   margin: auto;
   margin-left: 10px;
@@ -199,4 +198,3 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 5px;
   border-bottom: 3px solid black;
 }
->>>>>>> 1efc59cece965828866ee9d63c5559258c5fa28f
