@@ -4,8 +4,26 @@
 {% block content %}
 
 <h1>Comments</h1>
-<iframe src="https://www.youtube.com/embed/{{ object.embed }}" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe>
+<br>
+<br>
 
-{% for  %}
+
+{% for comment in comments %}
+
+<div class="container">
+        <div class="row">
+        <img class="rounded-circle account-img" src="{{ comment.author.profile.image.url }}" alt="Profile Picture">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-preview">
+              <h2>{{ comment.content }}</h2>
+              <p class="post-meta">Posted by <a href="#">{{ comment.author }}</a> on
+                {{ comment.date_posted|date:"F d, Y g:i a" }}</p>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+
+{% endfor %}
 
 {% endblock %}
