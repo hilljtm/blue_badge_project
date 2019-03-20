@@ -13,19 +13,3 @@ def Indiv_vid_view(request):
     }
 
     return render(request, 'pages/indiv_vid.html', context)
-
-
-class PostListView(ListView):
-    model = Indiv_vid
-    template_name = 'pages/blog.html'
-    context_object_name = 'comments'
-    ordering = ['-date_posted']
-
-
-class PostCreateCommentView(LoginRequiredMixin, CreateView):
-    model = Indiv_vid
-    fields = ['content']
-
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        return super().form_valid(form)
