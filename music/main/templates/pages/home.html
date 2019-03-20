@@ -14,11 +14,7 @@
 {% block content %}
 {% if user.is_authenticated %}
 <div class="center_div">
-    <h1 class="head_name">Hi {{ user.username }}!</h1>
-    <div class="center_div">
-            <a class="btn btn-primary my_btn homeBtn" href="{% url 'logout' %}">logout</a>
-            <a class="btn btn-primary my_btn homeBtn" href="{% url 'password_reset' %}">reset password</a>
-    </div>
+    
 </div>
 
 {% else %}
