@@ -1,58 +1,29 @@
-{% extends 'base.html' %}
-<!doctype html>
-<html lang="en">
-{% load static %}
-
-{% block stylesheet %}
-<link rel="stylesheet" href="{% static 'css/accounts.css' %}">
-{% endblock %}
-
-{% comment %} {% block content %}
+{% extends 'base.html' %} {% load crispy_forms_tags %}
+{% load static %} {% block content %}
 <div class="container">
-    <h1 class="text-center logo my-4">
-        <a href="/users/signup">Django Boards</a>
-    </h1>
-    <div class="row justify-content-center">
-        <div class="col-lg-8 col-md-10 col-sm-12">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title">Sign up</h3>
-                    <form method="post" novalidate>
-                        {% csrf_token %} {{ form.as_p }}
-                        {% include 'includes/form.html' %}
-                        <button type="submit" class="btn btn-primary btn-block">Create an account</button>
-                    </form>
-                </div>
-                <div class="card-footer text-muted text-center">
-                    Already have an account? <a href="#">Log in</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{% endblock %} {% endcomment %}
-
-{% block content %}
-<div class="col-6">
-    <h2 class="display-4">Sign Up</h2>
-    <form method="post">
-        {% csrf_token %}
-        <div class="row">
-        {% for field in form %}
-        <p>
-            {{ field.label_tag }}<br>
-            {{ field }}
-            {% if field.help_text %}
-            <small class='help'>{{ field.help_text }}</small>
-            {% endif %}
-            {% for error in field.errors %}
-            <p style="color: red">{{ error }}</p>
+<center>
+    <br>
+    <ul>
+        <h1>Sign up</h1>
+        <form method="post">
+            <li>{% csrf_token %} {% for field in form %}</li>
+            <p>
+               <li> {{ field.label_tag }}</li>
+                <li> {{ field }}</li>
+                <li>{% if field.help_text %}</li>
+                <li><medium style="color: white">{{ field.help_text }}</medium></li> 
+                <li>{% endif %}</li> 
+                <br>
+                <li>{% for error in field.errors %}</li>
+                <br>
+                <li><p style="color: red">{{ error }}</p></li>
+                {% endfor %}
+            </p>
             {% endfor %}
-        </p>
-        {% endfor %}
-        <button class="ml-5 btn btn-primary" type="submit">Sign up</button>
-    </form>
-    </div>
+            <button class="ml-2 btn btn-primary" type="submit">Sign up</button>
+        </form>
+    </ul>
+</center>
 </div>
-</html>
 {% endblock %}
+
