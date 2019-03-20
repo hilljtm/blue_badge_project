@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="wrapper">
+
+    <div class="center_div">
+        <h1>New Comment</h1>
+    </div>
+
+    {% if user.is_authenticated %}
+        <h3>You're logged in as: {{ user.username }} </h3>
+    {% endif %}
+
+
+<div class="center_div">
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form_group">
+            <legend class="border-bottom mb-4">Post</legend>
+            {{ form|crispy }}
+        </fieldset>
+        <div class="form_group">
+            <button class="btn btn-outline-info" type="submit">Post</button>
+        </div>
+    </form>
+</div>
+
+
+</div>
+{% endblock %}
+
+
