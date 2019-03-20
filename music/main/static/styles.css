@@ -175,6 +175,7 @@ h1, h2, h3, h4, h5, h6 {
 .center_div {
   margin: 10px;
   text-align: center;
+  width: 100%;
 }
 
 .homeTableLinks {
@@ -206,4 +207,8 @@ ul {
 
 .wrapper {
   margin: 5px;
+}
+
+.my_nav {
+  text-align: right;
 }
