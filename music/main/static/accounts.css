@@ -2,6 +2,10 @@ body {
   background-image: url(../img/shattered.png);
 }
 
+.signuppage {
+    margin-left: 300px;
+}
+
 .logo {
   font-family: 'Peralta', cursive;
 }

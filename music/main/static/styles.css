@@ -39,10 +39,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .my-footer {
  position: fixed;
- bottom: 0;
+ bottom: 0px;
  display: inline;
  margin-right: 1em;
 }
+
 
 .list_table.site-header{
   align-content: center;
@@ -198,3 +199,8 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 5px;
   border-bottom: 3px solid black;
 }
+
+ul {
+  list-style-type: none;
+}
+
