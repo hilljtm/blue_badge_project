@@ -8,7 +8,7 @@ from main.models import our_picks
 
 class Indiv_vid(models.Model):
     filter_by = our_picks.embed
-    content = models.CharField(max_length=300)
+    content = models.TextField()
     date_posted = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
