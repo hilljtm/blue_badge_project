@@ -36,7 +36,7 @@
 
 <body>
 
-  {% for post in posts %}
+  <!-- {% comment %} {% for post in posts %}
   <div class="container">
     <div class="row">
     <img class="rounded-circle account-img" src="{{ post.author.profile.image.url }}" alt="Profile Picture">
@@ -52,27 +52,45 @@
     </div>
   </div>
 
-  {% endfor %}
+  {% endfor %} {% endcomment %} -->
+
+{% for post in posts reversed %}
+
+<div class="card navbar-dark bg-dark container mt-3 mb-3" style="max-width: 50%;">
+  <div class="row">
+    <div class="col-md-4">
+      <img class="rounded-circle account-img mr-4" src="{{ post.author.profile.image.url }}" alt="Profile Picture">
+    </div>
+    <div class="col-md-8 mt-4">
+      <h2><a href="post/{{ post.id }}/">{{ post.title }}</a></h2>
+      <p class="post-meta">Posted by <a href="{% url 'userPosts' post.author.username %}">{{ post.author }}</a> on
+        {{ post.date_posted|date:"F d, Y g:i a" }}</p>
+    </div>
+  </div>
+</div>
+
+{% endfor %}
+
 
   {% if is_paginated %}
   
   {% if page_obj.has_previous %}
-    <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
-    <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+    <a class="btn btn-primary mb-4" href="?page=1">First</a>
+    <a class="btn btn-primary mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
   {% endif %}
   
   {% for num in page_obj.paginator.page_range %}
   
   {% if page_obj.number == num %}
-  <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
-  {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %} <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+  <a class="btn btn-primary mb-4" href="?page={{ num }}">{{ num }}</a>
+  {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %} <a class="btn btn-primary mb-4" href="?page={{ num }}">{{ num }}</a>
   
 {% endif %}
 {% endfor %}
   
 {% if page_obj.has_next %}
-    <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
-    <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+    <a class="btn btn-primary mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+    <a class="btn btn-primary mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
     {% endif %}
   
     {% endif %}

@@ -30,19 +30,19 @@
 
 {% for comment in comments reversed %}
 
-<div class="container">
-        <div class="row">
-        <img class="rounded-circle account-img" src="{{ comment.author.profile.image.url }}" alt="Profile Picture">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="post-preview">
-              <h2>{{ comment.content }}</h2>
-              <p class="post-meta">Posted by <a href="#">{{ comment.author }}</a> on
-                {{ comment.date_posted|date:"F d, Y g:i a" }}</p>
-            </div>
-            <hr>
-          </div>
-        </div>
-      </div>
+<div class="card navbar-dark bg-dark container mt-3" style="max-width: 50%;">
+  <div class="row">
+    <div class="col-md-4">
+      <img class="rounded-circle account-img mr-4" src="{{ comment.author.profile.image.url }}" alt="Profile Picture">
+    </div>
+    <div class="col-md-8 mt-4">
+      <h2>{{ comment.content }}</h2>
+      <p class="post-meta">Posted by <a href="#">{{ comment.author }}</a> on
+        {{ comment.date_posted|date:"F d, Y g:i a" }}</p>
+    </div>
+  </div>
+</div>
+
 
 {% endfor %}
 

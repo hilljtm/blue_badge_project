@@ -10,8 +10,8 @@
         <p>{{ user.email }}</p>
     </div>
     <div class="profile_btn_div">
-        <button type="submit" class="btn btn-light"><a class="profile_btn" href="{% url 'postCreate' %}">New Post</a></button>
-        <button type="submit" class="btn btn-light"><a class="profile_btn" href="{% url 'userPosts' user.username %}">See all Posts</a></button>
+        <button type="submit" class="btn btn-primary btn-sm"><a class="profile_btn" href="{% url 'postCreate' %}">New Post</a></button>
+        <button type="submit" class="btn btn-primary btn-sm"><a class="profile_btn" href="{% url 'userPosts' user.username %}">See all Posts</a></button>
     </div>
 </div>
 {% endblock %}
