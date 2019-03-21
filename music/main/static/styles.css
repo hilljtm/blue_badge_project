@@ -245,6 +245,7 @@ ul {
 
 .my_nav {
   text-align: right;
+<<<<<<< HEAD
 }
 
 .aboutcontainer {
@@ -255,4 +256,6 @@ ul {
 .post-preview {
   height: 45vh;
   padding: 5%;
+=======
+>>>>>>> 65a562787f981a6a4060256d859125f889d8e54d
 }
