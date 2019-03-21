@@ -19,7 +19,6 @@
             <div class="login-form">
                 <form method="post">
                     {% csrf_token %} {{ form.as_p }}
-                </form>
             </div>
             <div class="login-btn">
                 <button class="ml-2 btn btn-primary btn-sm" type="submit">Login</button>
@@ -29,6 +28,7 @@
                 <br>
                 <button class="ml-2 btn btn-primary btn-sm" type="submit"><a class="my_btn" href="/accounts/password_reset/">Forgot
                         password?</a></button>
+                </form>
             </div>
         </div>
     </div>
