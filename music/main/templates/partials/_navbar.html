@@ -1,26 +1,31 @@
-<nav class="navbar navbar-hide navbar-dark bg-dark static-top my_nav">
+<nav class="navbar navbar-hide navbar-dark bg-dark static-top">
   <div class="container">
-    <a class="navbar-brand" href="/">Welcome</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-      aria-expanded="True" aria-label="Toggle navigation">
+      <div class="col-md-8">
+            <a class="navbar-brand" href="/">Welcome</a>
+      </div>
+      <div class="col-md-2">
+        {% if user.is_authenticated %}
+        <h4 class="my_nav mt-2">Hi {{ user.username }}!</h4>
+        {% endif %}
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="True" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav">
         <li class="nav-item active">
-        <li><a class="nav-link" href="{% url 'homePage' %}">Home</a>
-        <li><a class="nav-link" href="{%  url 'blogPage' %}">Blog</a></li>
-
-          {% if user.is_authenticated %}
-        <li><a class="nav-link" href="{% url 'profile' %}">Profile</a></li>
-        <li><a class="nav-link" href="{% url 'logout' %}">Sign out</a></li>
-          {% else %}
-        <li><a class="nav-link" href="{% url 'login' %}">Login</a></li>
-        <li><a class="nav-link" href="{% url 'signup' %}">Sign Up</a></li>
-          {% endif %}
-
-      </ul>
+          <li><a class="nav-link" href="{% url 'homePage' %}">Home</a>
+            <li><a class="nav-link" href="{%  url 'blogPage' %}">Blog</a></li>
+            {% if user.is_authenticated %}
+            <li><a class="nav-link" href="{% url 'profile' %}">Profile</a></li>
+            <li><a class="nav-link" href="{% url 'logout' %}">Sign out</a></li>
+            <li><a class="nav-link" href="{% url 'password_reset' %}">reset password</a></li>
+            {% else %}
+            <li><a class="nav-link" href="{% url 'login' %}">Login</a></li>
+            <li><a class="nav-link" href="{% url 'signup' %}">Sign Up</a></li>
+            {% endif %}
+          </ul>
     </div>
   </div>
 </nav>
-
