@@ -93,7 +93,8 @@ h1, h2, h3, h4, h5, h6 {
 .form_group {
   font-size: 15px;
   text-align: center;
-  margin-top: 75px;
+  margin-top: 65px;
+  padding: 2%;
   color: black;
 }
 
@@ -101,8 +102,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 15px;
   text-align: center;
   margin-top: 100px;
-  height: 85vh;
-  padding: 5%;
+  height: 70vh;
+  padding: 3%;
 }
 
  .account-img {
@@ -145,6 +146,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .profile_btn_div {
   margin-top: 30px;
+  margin-right: 15%;
+  display: inline-block;
 }
 
 .profile_btn {
@@ -211,8 +214,9 @@ ul {
 
 .signup-container{
   margin-right: 50px;
+  margin-bottom: 2px;
   height: 90vh;
-  padding: 5%;
+  padding: 1%;
 }
 
 .about_cls{
@@ -245,17 +249,26 @@ ul {
 
 .my_nav {
   text-align: right;
-<<<<<<< HEAD
 }
 
 .aboutcontainer {
-  height: 85vh;
-  padding: 5%;
+  height: 80vh;
+  padding: 3%;
 }
 
 .post-preview {
   height: 45vh;
   padding: 5%;
-=======
->>>>>>> 65a562787f981a6a4060256d859125f889d8e54d
+}
+
+.delete-content-section {
+  background: white;
+  color: #0D0101;
+  padding: 35px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20%;
+  margin-top: 5%;
+  height: 35vh;
+  text-align: center;
 }
