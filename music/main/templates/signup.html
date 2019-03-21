@@ -1,29 +1,32 @@
 {% extends 'base.html' %} {% load crispy_forms_tags %}
 {% load static %} {% block content %}
-<div class="container">
-<center>
-    <br>
-    <ul>
-        <h1>Sign up</h1>
-        <form method="post">
-            <li>{% csrf_token %} {% for field in form %}</li>
-            <p>
-               <li> {{ field.label_tag }}</li>
-                <li> {{ field }}</li>
-                <li>{% if field.help_text %}</li>
-                <li><medium style="color: white">{{ field.help_text }}</medium></li> 
-                <li>{% endif %}</li> 
-                <br>
-                <li>{% for error in field.errors %}</li>
-                <br>
-                <li><p style="color: red">{{ error }}</p></li>
+<div class="signup-container">
+    <center>
+        <br>
+        <ul>
+            <h1>Sign up</h1>
+            <form method="post">
+                <li>{% csrf_token %} {% for field in form %}</li>
+                <p>
+                    <li> {{ field.label_tag }}</li>
+                    <li> {{ field }}</li>
+                    <li>{% if field.help_text %}</li>
+                    <li>
+                        <medium style="color: white">{{ field.help_text }}</medium>
+                    </li>
+                    <li>{% endif %}</li>
+                    <br>
+                    <li>{% for error in field.errors %}</li>
+                    <br>
+                    <li>
+                        <p style="color: red">{{ error }}</p>
+                    </li>
+                    {% endfor %}
+                </p>
                 {% endfor %}
-            </p>
-            {% endfor %}
-            <button class="ml-2 btn btn-primary" type="submit">Sign up</button>
-        </form>
-    </ul>
-</center>
+                <button class="ml-2 btn btn-primary" type="submit">Sign up</button>
+            </form>
+        </ul>
+    </center>
 </div>
 {% endblock %}
-
