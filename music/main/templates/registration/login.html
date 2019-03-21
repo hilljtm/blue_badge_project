@@ -12,10 +12,7 @@
 {% block content %}
 <div class="container login_con">
     <div class="row">
-        <div class="col col-md-3 about_cls">
-            <h1>temp left</h1>
-        </div>
-        <div class="col col-md-6 about_cls" id="login_box">
+        <div class="col about_cls" id="login_box">
             <div class="login-header">
                 <h1>Welcome, login</h1>
             </div>
@@ -24,7 +21,6 @@
                     {% csrf_token %} {{ form.as_p }}
                 </form>
             </div>
-            <br>
             <div class="login-btn">
                 <button class="ml-2 btn btn-primary btn-sm" type="submit">Login</button>
                 <button class="ml-2 btn btn-primary btn-sm" type="submit"><a class="my_btn" href="/users/signup/">Sign
@@ -36,8 +32,5 @@
             </div>
         </div>
     </div>
-</div>
-<div class="col col-md-3 about_cls">
-    <h1>temp right</h1>
 </div>
 {% endblock %}

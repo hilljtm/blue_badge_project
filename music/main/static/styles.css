@@ -101,6 +101,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 15px;
   text-align: center;
   margin-top: 100px;
+  height: 85vh;
+  padding: 5%;
 }
 
  .account-img {
@@ -209,6 +211,8 @@ ul {
 
 .signup-container{
   margin-right: 50px;
+  height: 90vh;
+  padding: 5%;
 }
 
 .about_cls{
@@ -216,7 +220,7 @@ ul {
 }
 
 #login_box{
-  border: 1px solid black;
+  border: 1px solid slategrey;
 }
 .login_con{
   height: 85vh;
@@ -225,12 +229,12 @@ ul {
 }
 
 .login-btn {
- margin: 2px auto;
- margin-left: 150px;
+ margin: 20px auto;
+ margin-left: 410px;
 }
 
 .login-form {
-  margin: 0 auto;
+  margin: 1px auto;
   width: 175px;
 }
 
@@ -241,4 +245,17 @@ ul {
 
 .my_nav {
   text-align: right;
+<<<<<<< HEAD
+}
+
+.aboutcontainer {
+  height: 85vh;
+  padding: 5%;
+}
+
+.post-preview {
+  height: 45vh;
+  padding: 5%;
+=======
+>>>>>>> 65a562787f981a6a4060256d859125f889d8e54d
 }
