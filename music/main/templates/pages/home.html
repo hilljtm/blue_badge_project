@@ -109,31 +109,36 @@
 {% if html_picks %}
     {% for song in html_picks %}
         {% if song == html_picks.0 %}
-    <div class="mt-5">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="post-preview">
-            <h3> <a class="homeTableTitles" href="/indiv_vid/">{{ song.song_title }}</a></h3>
-            <h2><a class="homeTableLinks" target=blank href="{{ song.link }}">{{ song.link }}</a></h2>
+        <div class="card navbar-dark bg-dark" style="max-width: 100%;">
+            <div class="row no-gutters">
+        <div class="col-md-8">
+            <div class="card-body">
+                <h3>{{ song.song_title }}</h3>
+                <h2><a class="homeTableLinks text-white bg-dark" target=blank href="{{ song.link }}">{{ song.link }}</a></h2>
+            </div>
         </div>
-        <hr>
-      </div>
+        <div class="col-md-4">
+            <div class="card-body center_div">
+                <a class="homeTableTitles text-white bg-dark" href="/indiv_vid/">
+                    <h1>Comments</h1>
+                    <i class="fas fa-comments fa-5x"></i>
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 {% else %}
-    <div class="mt-5">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="post-preview">
+<div class="card navbar-dark bg-dark mt-3" style="max-width: 100%;">
+    <div class="row no-gutters">
+        <div class="col-md-12">
+            <div class="card-body">
             <h3>{{ song.song_title }}</h3>
-            <h2><a class="homeTableLinks" target=blank href="{{ song.link }}">{{ song.link }}</a></h2>
+            <h2><a class="homeTableLinks text-white bg-dark" target=blank href="{{ song.link }}">{{ song.link }}</a></h2>
+            </div>
         </div>
-        <hr>
-      </div>
     </div>
-  </div>
 </div>
+
 {% endif %}
 {% endfor %}
 {% endif %}
