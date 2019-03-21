@@ -108,8 +108,7 @@ h1, h2, h3, h4, h5, h6 {
  .account-img {
   height: 125px;
   width: 125px;
-  margin-right: 20px;
-  margin-bottom: 16px;
+  float: right;
 }
 
 .my_btn{
@@ -245,7 +244,6 @@ ul {
 
 .my_nav {
   text-align: right;
-<<<<<<< HEAD
 }
 
 .aboutcontainer {
@@ -256,6 +254,4 @@ ul {
 .post-preview {
   height: 45vh;
   padding: 5%;
-=======
->>>>>>> 65a562787f981a6a4060256d859125f889d8e54d
 }
