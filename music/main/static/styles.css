@@ -39,10 +39,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .my-footer {
  position: fixed;
- bottom: 0;
+ bottom: 0px;
  display: inline;
  margin-right: 1em;
 }
+
 
 .list_table.site-header{
   align-content: center;
@@ -69,12 +70,14 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
 }
 
+.content-section1 {
+  background: #fafafa
+}
+
 .about {
   margin-top: 30px;
-  align-content: center;
-  margin-left: 50px;
-  margin-right: 50px;
-  font-size: 15px
+  font-size: 15px;
+  text-align: center;
 }
 
 .media-body {
@@ -87,9 +90,19 @@ h1, h2, h3, h4, h5, h6 {
    align-content: center;
 }
 
-.form-group {
+.form_group {
   font-size: 15px;
-  align-content: center;
+  text-align: center;
+  margin-top: 75px;
+  color: black;
+}
+
+.form_group1{
+  font-size: 15px;
+  text-align: center;
+  margin-top: 100px;
+  height: 85vh;
+  padding: 5%;
 }
 
  .account-img {
@@ -141,4 +154,108 @@ h1, h2, h3, h4, h5, h6 {
 .profile_btn:hover {
   text-decoration: none;
   color: rgb(36, 32, 32);
+}
+
+.btn-outline-info {
+  margin-bottom: 75px;
+}
+
+.my_profile {
+ align-content: center;
+}
+
+.homeBtn {
+  margin: auto;
+  margin-left: 10px;
+  float: center;
+  color: whitesmoke; 
+  text-decoration: none;
+}
+
+.center_div {
+  margin: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.homeTableLinks {
+  color: rgb(53, 53, 134);
+  text-decoration: none;
+}
+
+.homeTableLinks:hover {
+  text-decoration: none;
+  padding-bottom: 5px;
+  border-bottom: 3px solid whitesmoke;
+}
+
+.homeTableTitles {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.homeTableTitles:hover {
+  color: whitesmoke;  
+  text-decoration: none;
+  padding-bottom: 5px;
+  border-bottom: 3px solid black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.wrapper {
+  margin: 5px;
+}
+
+.signup-container{
+  margin-right: 50px;
+  height: 90vh;
+  padding: 5%;
+}
+
+.about_cls{
+  padding: 2%;
+}
+
+#login_box{
+  border: 1px solid slategrey;
+}
+.login_con{
+  height: 85vh;
+  padding: 5%;
+  margin-right: 10%;
+}
+
+.login-btn {
+ margin: 20px auto;
+ margin-left: 410px;
+}
+
+.login-form {
+  margin: 1px auto;
+  width: 175px;
+}
+
+.login-header {
+  text-align: center;
+  margin-left: 3px;
+}
+
+.my_nav {
+  text-align: right;
+<<<<<<< HEAD
+}
+
+.aboutcontainer {
+  height: 85vh;
+  padding: 5%;
+}
+
+.post-preview {
+  height: 45vh;
+  padding: 5%;
+=======
+>>>>>>> 65a562787f981a6a4060256d859125f889d8e54d
 }

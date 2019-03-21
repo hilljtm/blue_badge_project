@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+{% if user.is_authenticated %}
+
+<div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col mt-5"><h1>New Comment</h1></div>
+            <div class="col"></div>                
+        </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form_group ">
+                    <div>
+                        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" alt="Profile image">
+                        <h4>{{ user.username }}</h4>
+                    </div>
+                    {{ form.content|as_crispy_field }}
+                </fieldset>
+                <div class="form_group mb-5">
+                    <button class="btn btn-primary" type="submit">Post</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
+
+

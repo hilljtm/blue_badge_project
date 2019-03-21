@@ -7,24 +7,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
- {% block content %}
-<section id="cover">
-    <div id="cover-caption">
-        <div id="container" class="container">
-            <div class="row">
-                <div class="col-sm-10 offset-sm-1 text-center">
-                    <h2 class="display-4">Welcome, login?</h2>
-                    <div class="info-form mt-5">
-                        <form method="post">
-                            {% csrf_token %} {{ form.as_p }}
-                            <button class="ml-5 btn btn-primary" type="submit">Login</button>
-                            <button class="ml-5 btn btn-primary" type="submit"><a class="my_btn" href="/users/signup/">Sign Up</a></button>
-                        </form>
-                    </div>
-                </div>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+{% block content %}
+<div class="container login_con">
+    <div class="row">
+        <div class="col about_cls" id="login_box">
+            <div class="login-header">
+                <h1>Welcome, login</h1>
+            </div>
+            <div class="login-form">
+                <form method="post">
+                    {% csrf_token %} {{ form.as_p }}
+                </form>
+            </div>
+            <div class="login-btn">
+                <button class="ml-2 btn btn-primary btn-sm" type="submit">Login</button>
+                <button class="ml-2 btn btn-primary btn-sm" type="submit"><a class="my_btn" href="/users/signup/">Sign
+                        Up</a></button>
+                <br>
+                <br>
+                <button class="ml-2 btn btn-primary btn-sm" type="submit"><a class="my_btn" href="/accounts/password_reset/">Forgot
+                        password?</a></button>
             </div>
         </div>
     </div>
-</section>
+</div>
 {% endblock %}
